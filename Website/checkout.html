@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="Feedback.html">Feedback Form</a>
+            <a href="Investment.html">Investment PL</a>
+            <a href="Payment.html">Payments</a>
+            <a href="SAMMA 1.html">SAMMA</a>
+        </nav>
+
+        <header>
+            <h1>Checkout</h1>
+        </header>
+
+        <section class="checkout-details">
+            <h2>Your Cart</h2>
+            <ul id="checkout-items"></ul>
+            <p>Total: $<span id="checkout-total">0.00</span></p>
+            <button id="payment-button">Proceed to Payment</button>
+        </section>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+
+<style>
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+    }
+
+    /* Navigation Styles */
+    nav {
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 15px;
+        font-size: 18px;
+    }
+
+    nav a:hover {
+        background-color: #575757;
+        border-radius: 5px;
+    }
+
+    /* Checkout Section */
+    .checkout-details {
+        background-color: #fff;
+        padding: 20px;
+        margin-top: 30px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .checkout-details h2 {
+        font-size: 24px;
+        color: #333;
+    }
+
+    ul#checkout-items {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    ul#checkout-items li {
+        background-color: #fafafa;
+        margin: 10px 0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    ul#checkout-items li:nth-child(odd) {
+        background-color: #f1f1f1;
+    }
+
+    #checkout-total {
+        font-size: 20px;
+        font-weight: bold;
+        color: #28a745;
+        margin-top: 15px;
+    }
+
+    /* Button Styles */
+    #payment-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 15px;
+        font-size: 18px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+
+    #payment-button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+        .container {
+            padding: 10px;
+        }
+
+        .checkout-details {
+            padding: 15px;
+        }
+
+        header h1 {
+            font-size: 20px;
+        }
+
+        #payment-button {
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        nav a {
+            padding: 8px 16px;
+            font-size: 16px;
+        }
+    }
+
+</style>
+
+<script>
+    window.onload = function() {
+        const cartData = JSON.parse(localStorage.getItem('cartData'));
+        const totalPrice = localStorage.getItem('totalPrice');
+
+        if (cartData && totalPrice) {
+            const checkoutItemsList = document.getElementById('checkout-items');
+            checkoutItemsList.innerHTML = '';
+
+            cartData.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.product} - $${item.price}`;
+                checkoutItemsList.appendChild(li);
+            });
+
+            document.getElementById('checkout-total').textContent = totalPrice;
+
+            // Handle the payment process (for now, it will simply display a message)
+            const paymentButton = document.getElementById('payment-button');
+            paymentButton.addEventListener('click', function() {
+                alert('Proceeding to payment...');
+                // You can replace this with actual payment gateway integration
+            });
+        } else {
+            alert("No cart data found. Please add items to the cart first.");
+            window.location.href = "index.html"; // Redirect back to product page
+        }
+    }
+</script>
+</html>
