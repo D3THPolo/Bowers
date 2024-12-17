@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowers to Business - Home</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        /* Root Variables */
+        :root {
+            --primary-color: #831e23;
+            --secondary-color: #e94e77;
+            --background-color: #f9f9f9;
+            --text-color: #2c3e50;
+            --light-color: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--light-color);
+            text-align: center;
+            padding: 4em 1em;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5em;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5em;
+        }
+
+        header a {
+            display: inline-block;
+            background: var(--light-color);
+            color: var(--primary-color);
+            padding: 0.8em 2em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header a:hover {
+            background-color: var(--secondary-color);
+            color: var(--light-color);
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--light-color);
+            padding: 1em;
+            box-shadow: 0 4px 10px var(--shadow-color);
+        }
+
+        nav a {
+            margin: 0 1em;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Main Sections */
+        .section {
+            padding: 4em 1em;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1em;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2em;
+            margin-top: 2em;
+        }
+
+        .card {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            padding: 2em;
+            width: 300px;
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            margin-bottom: 1em;
+            color: var(--primary-color);
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+
+        /* Contact Section */
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 1em;
+            border-radius: 5px;
+            border: 1px solid var(--shadow-color);
+            background-color: var(--background-color);
+        }
+
+        .contact button {
+            background: var(--primary-color);
+            color: var(--light-color);
+            padding: 0.8em 2em;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact button:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            text-align: center;
+            padding: 1em;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .cards {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Bowers to Business</h1>
+        <p>Your trusted partner in navigating the digital business world.</p>
+        <a href="#services">Explore Services</a>
+        
+    </header>
+
+    <nav>
+        <a href="Feedback.html">Feedback From </a>
+        <a href="Investment.html">Investment PL</a>
+        <a href="Payment.html">Paymnets</a>
+        <a href="SAMMA 1.html">Service</a>
+        <a href="invest for AI.html">Invest in ShieldLogic AI</a>
+        <a href="TOS.html">Terms of Services</a>
+        <a href="Privacy Policy.html">Privacy Policy</a>
+    </nav>
+
+    <section id="about" class="section">
+        <h2 class="section-title">About Us</h2>
+        <p>At Bowers to Business, we specialize in helping entrepreneurs and businesses achieve their goals through tailored solutions. From social media marketing to strategic consulting, we are here to support your success.</p>
+        <img src="Main 2.jpg" alt="Girl in a jacket" width="400" height="300">
+    </section>
+
+    <section id="services" class="section">
+        <h2 class="section-title">Our Services</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Social Media Marketing</h3>
+                <p>Boost your online presence and engage with your audience through expertly crafted marketing campaigns.</p>
+            </div>
+            <div class="card">
+                <h3>Consulting & Strategy</h3>
+                <p>Receive personalized guidance to streamline your operations and achieve your business objectives.</p>
+            </div>
+            <div class="card">
+                <h3>Investment Opportunities</h3>
+                <p>Explore investment options designed to help you grow your wealth and secure your future.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p>"Bowers to Business transformed our marketing strategy and helped us achieve unprecedented growth." - Client A</p>
+        <p>"Their team provided invaluable insights that streamlined our operations and boosted our profitability." - Client B</p>
+    </section>
+
+    <section id="contact" class="section contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <form action="submit_form.php" method="post">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bowers to Business. All rights reserved.</p>
+    </footer>
+</body>
+</html>
