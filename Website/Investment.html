@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Maximize your returns with strategic investment plans designed for growth and stability.">
+    <meta property="og:image" content="thumbnail.jpg">
+    <meta property="og:title" content="Grow Your Wealth with Smart Investments">
+    <meta property="og:description" content="Invest in stocks, real estate, and more to build a secure financial future.">
+    <title>Maximize Your Investment Returns</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #1a1f36;
+            --primary-text: #e3e4fa;
+            --secondary-bg: #282f4b;
+            --accent-color: #6c5ce7;
+            --hover-accent: #a29bfe;
+            --form-bg: #20283e;
+            --button-bg: #6c5ce7;
+            --button-hover: #4e3fb1;
+            --footer-bg: #1a1f36;
+        }
+    
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+            line-height: 1.6;
+        }
+    
+        header {
+            background-color: var(--secondary-bg);
+            color: var(--primary-text);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--secondary-bg);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+    
+        nav a {
+            color: var(--primary-text);
+            padding: 10px 15px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    
+        nav a:hover {
+            background-color: var(--accent-color);
+            color: #ffffff;
+        }
+
+        .hero {
+            background: url('hero-background.jpg') no-repeat center center/cover;
+            padding: 60px 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #a29bfe;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial {
+            margin: 20px auto;
+            font-style: italic;
+        }
+
+        cite {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .progress-bar {
+            background-color: #e3e4fa;
+            width: 100%;
+            height: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .progress {
+            background-color: var(--accent-color);
+            height: 100%;
+            border-radius: 10px;
+            transition: width 1s ease;
+        }
+
+        .numbers {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            text-align: center;
+        }
+
+        .form-container {
+            background-color: var(--form-bg);
+            padding: 40px;
+            margin: 20px auto;
+            border-radius: 10px;
+            max-width: 700px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+    
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 6px;
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+            font-size: 1rem;
+        }
+    
+        input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+            outline: 2px solid var(--accent-color);
+        }
+    
+        input[type="submit"] {
+            background-color: var(--button-bg);
+            color: #ffffff;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+    
+        input[type="submit"]:hover {
+            background-color: var(--button-hover);
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background-color: var(--footer-bg);
+            color: #cccccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        .highlight {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .benefits-list {
+            list-style-type: none;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        .benefits-list li {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .form-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grow Your Wealth with Smart Investments</h1>
+        <p>Maximize Your Returns, Minimize Your Risks</p>
+    </header>
+
+    <nav>
+        <a href="Home page.html">Home Page </a>
+        <a href="Feedback.html">Feedback</a>
+        <a href="SAMMA 1.html">services</a>
+        <a href="invest for AI.html">Get Started</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Invest Smart, Grow Big!</h2>
+            <p>Take control of your financial future today. Maximize your returns with us.</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Why Choose Us?</h2>
+        <p>We believe in turning every dollar you invest into more. Our <span class="highlight">strategic investment plans</span> are designed to help you earn more from your money while minimizing risk.</p>
+        <p>With an average return of <span class="numbers">8-12%</span> annually, we help you unlock the potential of your investments. Whether you're planning for retirement, saving for a big purchase, or just looking to grow your wealth, we're here to help you succeed.</p>
+        <img src="pic10.png" alt="Investment Growth Image">
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial" data-aos="fade-up">
+            <p>"We’ve seen remarkable growth in our portfolio thanks to this service!"</p>
+            <cite>- John Doe, Investor</cite>
+        </div>
+        <div class="testimonial" data-aos="fade-up">
+            <p>"Their expertise in stock and real estate investments is unparalleled."</p>
+            <cite>- Jane Smith, Entrepreneur</cite>
+        </div>
+    </section>
+
+    <!-- Investment Growth Section -->
+    <section id="growth">
+        <h2>Your Potential Growth</h2>
+        <p>Watch your investment grow over time with our strategic plans.</p>
+        <div class="progress-bar">
+            <div class="progress" style="width: 75%;"></div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Investment Opportunities</h2>
+        <ul class="benefits-list">
+            <li>✔️ Diverse Portfolio Management – Spread your risk with multiple investment types.</li>
+            <li>✔️ Real-time Financial Data – Stay updated on your investments.</li>
+            <li>✔️ Transparent Processes – No hidden fees, no surprises.</li>
+        </ul>
+    </section>
+
+    <!-- Investment Calculator -->
+    <section id="calculator">
+        <h2>Investment Calculator</h2>
+        <form id="investment-form">
+            <label for="amount">Investment Amount</label>
+            <input type="number" id="amount" name="amount" required>
+            <label for="years">Years</label>
+            <input type="number" id="years" name="years" required>
+            <input type="submit" value="Calculate">
+        </form>
+        <div id="result"></div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="form-container">
+            <form>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="How can we help you?" rows="5" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Maximize Your Returns. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        document.getElementById('investment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const amount = parseFloat(document.getElementById('amount').value);
+            const years = parseInt(document.getElementById('years').value);
+            const rate = 0.10; // Assume 10% return rate
+
+            const result = amount * Math.pow(1 + rate, years);
+            document.getElementById('result').textContent = `Estimated Value: $${result.toFixed(2)}`;
+        });
+    </script>
+</body>
+</html>
